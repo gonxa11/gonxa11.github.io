@@ -522,85 +522,72 @@ section {
 /* Section skills */
 .skills {
     background: var(--second-bg-color);
-    margin: 0 auto;
-    padding-bottom: 3rem;
 }
 
-.skills h2 {
-    margin-bottom: 2rem;
-}
-
-.skill-bar {
-    margin-top: 8rem;
-    padding: 25px 30px;
+.skills .container {
     background: var(--bg-color);
-    border: 2px solid var(--main-color);
-    border-radius: 10px;
+    color: var(--text-color);
+    border-radius: 4rem;
+    padding: 2rem;
+    width: 80%;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.skills .container .row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.skills .container .bar {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 4rem;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0px 15px #fff;
+    transition: .3s;
+}
+
+.skills .container .bar:hover {
+    box-shadow: 0 8px 10px #000;
+    transform: scale(1.1);
+}
+
+.skills .container .bar .info {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-    margin: 0 auto;
-    max-width: 70%;
-    margin-bottom: 3rem;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
-.skill-bar .bar {
-    margin: 20px 0;
-}
-
-.skill-bar .bar:first-child {
-    margin-top: 0;
-}
-
-.skill-bar .bar .info {
-    margin-bottom: 5px;
-}
-
-.skill-bar .bar .info span {
-    color: var(--main-color);
+.skills .container .bar .info span {
+    font-size: 2rem;
     font-weight: 500;
-    font-size: 17px;
+    margin-left: 0.5rem;
+    color: #000;
+    font-weight: 800;
 }
 
-.skill-bar .bar .progress-line {
-    height: 10px;
-    width: 100%;
-    background: #fff;
-    position: relative;
-    border-radius: 10px;
+img {
+    width: 40%;
 }
 
-.skill-bar .bar .progress-line span {
-    height: 100%;
-    position: absolute;
-    border-radius: 10px;
-    background: #fff;
-    cursor: pointer;
-}
+@media screen and (max-width: 600px) {
+    .skills .container {
+        margin: 0 auto;
+        padding: 0;
+    }
 
-.skill-bar .bar .progress-line.python span {
-    width: 94%;
-    background: gold;
-}
+    .skills .container .row {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 1rem;
+        padding: 2rem .2rem 2rem .2rem;
+        gap: 3rem;
+    }
 
-.bar .progress-line.javascript span {
-    width: 70%;
-    background: rgb(56, 58, 255);
-}
-
-.bar .progress-line.html span {
-    width: 70%;
-    background: rgb(31, 248, 183);
-}
-
-.bar .progress-line.css span {
-    width: 85%;
-    background: rgb(115, 0, 155);
-}
-
-.bar .progress-line.mysql span {
-    width: 75%;
-    background: rgb(0, 155, 72);
 }
 
 /* Section contact */
